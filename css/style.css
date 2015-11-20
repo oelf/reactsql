@@ -1,0 +1,219 @@
+@import
+	url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 14px;
+	font-family: "Open Sans", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.clear {
+	clear: both;
+}
+
+#main {
+	height: 100%;
+	width: 100%;
+}
+
+#menubar {
+	height: 25px;
+	width: 100%;
+	border-bottom: 1px solid #999999;
+	background: #EEEEEE;
+}
+
+#menubar > .menuitem, #toolbar > .toolbaritem {
+	float: left;
+	width: 50px;
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 25px;
+}
+
+#toolbar {
+	height: 25px;
+	width: 100%;
+	border-bottom: 1px solid #999999;
+	background: #DDDDDD;
+}
+
+#wrapper {
+	width: 100%;
+	height: calc(100% - 153px);
+	border-bottom: 1px solid #999999;
+}
+
+#wrapper>div {
+	float: left;
+	height: 100%;
+}
+
+#sidebar {
+	width: 250px;
+	border-right: 1px solid #999999;
+}
+
+#sidebar ul {
+	list-style: circle;
+}
+
+#content {
+	width: calc(100% - 251px);
+	overflow: auto;
+}
+
+#log {
+	width: 100%;
+	height: 100px;
+	overflow: auto;
+	counter-reset: line;
+}
+
+#log > p > span::before {
+	counter-increment: line;
+	content: counter(line);
+	display: inline-block;
+	border-right: 1px solid #ddd;
+	padding: 0 .5em;
+	margin-right: .5em;
+	width: 20px;
+}
+
+#sidebar div {
+	height: 25px;
+	width: 100%;
+	line-height: 25px;
+	vertical-align: middle;
+}
+
+#sidebar div[data-level="1"] {
+	margin-left: 10px;
+	width: calc(100% - 15px);
+}
+
+#sidebar div[data-level="1"]>div>div:first-child, #sidebar div[data-level="2"]>div {
+	cursor: pointer;
+}
+
+#sidebar div[data-level="1"]>div>div:first-child:hover, #sidebar div[data-level="2"]>div:hover {
+	background: #EFEFEF;
+}
+
+.menuitem:hover {
+	background: #DDDDDD;
+}
+
+.toolbaritem:hover {
+	background: #EEEEEE;
+}
+
+.menuitem, .toolbaritem {
+	cursor: pointer;
+}
+
+.selected {
+	background: #EFEFEF;
+}
+
+#sidebar div[data-level="2"] {
+	margin-left: 20px;
+	width: calc(100% - 20px);
+}
+
+#datatable {
+	width: calc(100% - 10px);
+	text-align: left;
+	background: #ffffff;
+	width: 100%;
+}
+
+#datatable td {
+	padding: 2px 10px;
+}
+
+#datatable > tr:first-child > td {
+	background: #4886C4;
+	background: linear-gradient(to bottom, #AAAAAA 0%, #AAAAAA 100%);
+	color: #FFF;
+	font-weight: 600;
+	border-left: 1px solid #DDDDDD;
+	line-height: 1.2;
+}
+
+#datatable >tr:not(:first-child )>td {
+	color: #00496B;
+	border-left: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	line-height: 1.2;
+}
+
+#datatable>tr:first-child>td:first-child {
+	border: none;
+}
+
+#datatable>tr:first-child>td:last-child {
+	border-right: 1px solid #AAAAAA;
+}
+
+#datatable>tr:first-child>td:first-child {
+	border-left: 1px solid #AAAAAA;
+}
+
+#datatable>tr:last-child>td {
+	border-bottom: 1px solid #ddd;
+}
+
+#datatable>tr:not(:first-child )>td:last-child {
+	border-right: 1px solid #ddd;
+}
+
+#datatable>tr:not(:first-child )>td:firstchild {
+	border-left: 1px solid #ddd;
+}
